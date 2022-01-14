@@ -1,0 +1,33 @@
+style.
+ table,
+ th,
+ td {
+    border: 1px solid black;
+ } 
+style.
+ img {  width: 30%; 
+    height: 30%;   
+    } 
+html 
+ head
+  title="Productos"
+ body
+  h1(style="color:black;")!= '<h3> Productos </h3>'
+  if showAllProducts        
+   table.table
+    tr
+     th Nombre
+     th Precio
+     th Foto
+      tbody
+       each item in products
+        tr
+         td #{item.title}
+         td #{item.price}
+         td(scope="row") 
+          img(src=item.thumbnail)
+
+<div>
+    <a href="/api/inicio"> Volver </a>
+</div>
+
