@@ -13,6 +13,10 @@ html
   title="Productos"
  body
   h1(style="color:black;")!= '<h3> Productos </h3>'
+  
+  unless showAllProducts 
+    h1(style="color:black;")!= '<h3> No se encontraron productos </h3>'
+
   if showAllProducts        
    table.table
     tr
@@ -26,6 +30,7 @@ html
          td #{item.price}
          td(scope="row") 
           img(src=item.thumbnail)
+
 
 <div>
     <a href="/api/inicio"> Volver </a>
